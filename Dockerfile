@@ -17,7 +17,6 @@ RUN echo 'Acquire::http::Proxy "http://172.17.0.1:3142";' > /etc/apt/apt.conf.d/
     rm /etc/logrotate.d/nginx && \
     mv /build-files/nginx.logrotate /etc/logrotate.d/nginx && \
     chmod 644 /etc/logrotate.d/nginx && \
-    mv /build-files/authorized_keys /root/.ssh/authorized_keys && \
     mv /build-files/start.sh /start.sh && \
     chmod 600 /root/.ssh/authorized_keys && \
     chown root:root /start.sh && \
