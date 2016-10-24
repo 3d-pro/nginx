@@ -2,11 +2,8 @@ FROM 3dpro/openssh
 
 ADD build-files /build-files
 RUN echo 'Acquire::http::Proxy "http://172.17.0.1:3142";' > /etc/apt/apt.conf.d/11proxy && \
-    apt-get update && \
-    apt-get install -y software-properties-common && \
-    add-apt-repository -y ppa:ondrej/nginx && \
+    apt-key add /build-files/ondrej-nginx.key && \
     mv /build-files/ondrej-nginx.list /etc/apt/sources.list.d/ && \
-    rm /etc/apt/sources.list.d/ondrej-nginx-jessie.list && \
     apt-get update && apt-get -y dist-upgrade && \
     apt-get install -y nginx git curl apt-transport-https && \
     sed -i 's/rotate .*/rotate 90/g' /etc/logrotate.d/nginx && \
