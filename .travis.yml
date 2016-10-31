@@ -9,3 +9,6 @@ script:
    - docker pull 3dpro/openssh
    - docker build -t 3dpro/nginx .
    - docker push 3dpro/nginx
+
+after_success:
+   - ./trigger-nginx-php.sh $TRAVIS_TOKEN
