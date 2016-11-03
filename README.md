@@ -1,4 +1,4 @@
-# Nginx 1.10 /w OpenSSL 1.0.2 image of Debian Jessie [![Build Status](https://travis-ci.org/3d-pro/nginx.svg?branch=master)](https://travis-ci.org/3d-pro/nginx)
+# Nginx Mainline /w OpenSSL 1.0.2 image of Debian Jessie [![Build Status](https://travis-ci.org/3d-pro/nginx.svg?branch=master)](https://travis-ci.org/3d-pro/nginx)
 
 ## Required Docker Images
 - openssh
