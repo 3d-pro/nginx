@@ -11,4 +11,4 @@ script:
    - docker push 3dpro/nginx
 
 after_success:
-   - ./trigger-nginx-php.sh $TRAVIS_TOKEN
+   - ./trigger.sh $TRAVIS_TOKEN
