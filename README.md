@@ -1,4 +1,4 @@
-# Nginx Mainline /w OpenSSL 1.0.2 image of Debian Sid [![Build Status](https://travis-ci.org/3d-pro/nginx.svg?branch=master)](https://travis-ci.org/3d-pro/nginx)
+# Nginx Mainline [![Build Status](https://travis-ci.org/3d-pro/nginx.svg?branch=master)](https://travis-ci.org/3d-pro/nginx)
 
 ## Required Docker Images
 - openssh

@@ -3,7 +3,7 @@ FROM 3dpro/openssh
 ADD build-files /build-files
 RUN echo 'Acquire::http::Proxy "http://172.17.0.1:3142";' > /etc/apt/apt.conf.d/11proxy && \
     apt-get update && apt-get -y dist-upgrade && \
-    apt-get install -y nginx git curl apt-transport-https && \
+    apt-get install -t experimental -y nginx && \
     sed -i 's/rotate .*/rotate 90/g' /etc/logrotate.d/nginx && \
     sed -i 's/weekly/daily/g' /etc/logrotate.d/nginx && \
     sed -i 's/invoke-rc.d nginx rotate >\/dev\/null 2>&1/[ ! -f \/var\/run\/nginx.pid ] || kill -USR1 `cat \/var\/run\/nginx.pid`/g' /etc/logrotate.d/nginx && \
