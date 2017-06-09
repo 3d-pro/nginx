@@ -23,5 +23,4 @@ VOLUME ["/var/log", "/etc/nginx", "/etc/ssl", "/root/.ssh"]
 
 CMD ["/start.sh"]
 
-# Expose port
 EXPOSE 80 443
