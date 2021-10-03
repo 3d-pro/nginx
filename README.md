@@ -1,4 +1,4 @@
-# Nginx Mainline [![Build Status](https://travis-ci.org/3d-pro/nginx.svg?branch=master)](https://travis-ci.org/3d-pro/nginx)
+# Nginx Stable [![Build Status](https://github.com/3d-pro/nginx/actions/workflows/docker-build.yaml/badge.svg)](https://github.com/3d-pro/nginx/actions)
 
 ## Required Docker Images
 - openssh
