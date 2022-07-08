@@ -1,6 +1,6 @@
 FROM 3dpro/openssh:latest
 
-ADD build-files /build-files
+COPY build-files /build-files
 RUN apt-get update && \
     sed -i '/^weekly/a \dateext\ndateformat .%Y%m%d' /etc/logrotate.conf && \
     sed -i 's/\trotate .*/\trotate 365/g' /etc/logrotate.d/rsyslog && \
