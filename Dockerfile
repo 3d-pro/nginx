@@ -4,7 +4,7 @@ COPY build-files /build-files
 RUN apt-get update && \
     sed -i '/^weekly/a \dateext\ndateformat .%Y%m%d' /etc/logrotate.conf && \
     sed -i 's/\trotate .*/\trotate 365/g' /etc/logrotate.d/rsyslog && \
-    sed -i 's/reload rsyslog/service rsyslog rotate/g' /etc/logrotate.d/rsyslog && \
+    # sed -i 's/reload rsyslog/service rsyslog rotate/g' /etc/logrotate.d/rsyslog && \
     sed -i 's/--pidfile \$PIDFILE --exec \$DAEMON$/--pidfile \$PIDFILE/g' /etc/init.d/rsyslog && \
     sed -i '/^\($ModLoad imklog\|$KLogPermitNonKernelFacility\)/ s/^#*/#/' /etc/rsyslog.conf && \
     service rsyslog start && \
